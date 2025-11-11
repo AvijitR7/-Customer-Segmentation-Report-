@@ -1,0 +1,2155 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0818.1050                               -->
+<workbook original-version='18.1' source-build='2025.2.2 (20252.25.0818.1050)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SavingAnalyticObjects />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Min Monetary' datatype='real' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='0.'>
+        <calculation class='tableau' formula='0.' />
+        <range granularity='100.0' max='10000.0' min='0.0' />
+      </column>
+      <column caption='Start Date' datatype='date' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='#2024-11-03#'>
+        <calculation class='tableau' formula='#2024-11-03#' />
+      </column>
+      <column caption='End Date' datatype='date' name='[Parameter 3]' param-domain-type='any' role='measure' type='quantitative' value='#2025-11-03#'>
+        <calculation class='tableau' formula='#2025-11-03#' />
+      </column>
+    </datasource>
+    <datasource caption='Sheet1 (customer_segmentation_sample)' inline='true' name='federated.0vg4qmc0c70ahv1bs7ro01uwk58p' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='customer_segmentation_sample' name='excel-direct.0b0mea60plxslb17euiqh0hr8zg9'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/ASUS/OneDrive/Desktop/BA P/customer_segmentation_sample.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0b0mea60plxslb17euiqh0hr8zg9' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:D501:no:A1:D501:0' header='yes' outcome='6'>
+            <column datatype='string' name='Customer ID' ordinal='0' />
+            <column datatype='string' name='Order ID' ordinal='1' />
+            <column datatype='datetime' name='Order Date' ordinal='2' />
+            <column datatype='real' name='Sales' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D501:no:A1:D501:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_DFAD3E9B34294016B3362B4D4F758A40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Order ID]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Order ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_DFAD3E9B34294016B3362B4D4F758A40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Order Date]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Order Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_DFAD3E9B34294016B3362B4D4F758A40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_DFAD3E9B34294016B3362B4D4F758A40]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Recency (Days)' datatype='integer' name='[Calculation_896779277933133824]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;, MAX([Order Date]), TODAY())' />
+      </column>
+      <column caption='Frequency' datatype='integer' name='[Calculation_896779277933928449]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Order ID])' />
+      </column>
+      <column caption='Monetary' datatype='real' name='[Calculation_896779277934039042]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Sales])' />
+      </column>
+      <column caption='R_pct' datatype='real' name='[Calculation_896779277935079427]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1 - RANK_PERCENTILE([Calculation_896779277933133824])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='F_pct' datatype='real' name='[Calculation_896779277935378436]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_PERCENTILE([Calculation_896779277933928449])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='M_pct' datatype='real' name='[Calculation_896779277935480837]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_PERCENTILE([Calculation_896779277934039042])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='R_score' datatype='integer' name='[Calculation_896779277937147910]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_896779277935079427] &gt;= 0.8 THEN 5&#13;&#10;ELSEIF [Calculation_896779277935079427] &gt;= 0.6 THEN 4&#13;&#10;ELSEIF [Calculation_896779277935079427] &gt;= 0.4 THEN 3&#13;&#10;ELSEIF [Calculation_896779277935079427] &gt;= 0.2 THEN 2&#13;&#10;ELSE 1&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='F_score' datatype='integer' name='[Calculation_896779277937221639]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_896779277935378436] &gt;= 0.8 THEN 5&#13;&#10;ELSEIF [Calculation_896779277935378436] &gt;= 0.6 THEN 4&#13;&#10;ELSEIF [Calculation_896779277935378436] &gt;= 0.4 THEN 3&#13;&#10;ELSEIF [Calculation_896779277935378436] &gt;= 0.2 THEN 2&#13;&#10;ELSE 1&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='M_score' datatype='integer' name='[Calculation_896779277937299464]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_896779277935480837] &gt;= 0.8 THEN 5&#13;&#10;ELSEIF [Calculation_896779277935480837] &gt;= 0.6 THEN 4&#13;&#10;ELSEIF [Calculation_896779277935480837] &gt;= 0.4 THEN 3&#13;&#10;ELSEIF [Calculation_896779277935480837] &gt;= 0.2 THEN 2&#13;&#10;ELSE 1&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='RFM_Score' datatype='integer' name='[Calculation_896779277937590281]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INT([Calculation_896779277937147910]) * 100&#13;&#10;+ INT([Calculation_896779277937221639]) * 10&#13;&#10;+ INT([Calculation_896779277937299464])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Monetary Filter' datatype='boolean' name='[Calculation_896779278075015178]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='[Calculation_896779277934039042] &gt;= [Parameters].[Parameter 1]' />
+      </column>
+      <column caption='Date Range Filter' datatype='boolean' name='[Calculation_896779278076141579]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Order Date] &gt;= [Parameters].[Parameter 2] AND [Order Date] &lt;= [Parameters].[Parameter 3]' />
+      </column>
+      <column caption='Customer_Status' datatype='string' name='[Calculation_896779278078619660]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_896779277937147910] &gt;= 4 AND [Calculation_896779277937221639] &gt;= 4 AND [Calculation_896779277937299464] &gt;= 4 THEN &quot;Loyal&quot;&#13;&#10;ELSEIF [Calculation_896779277937147910] &lt;= 2 AND [Calculation_896779277937221639] &gt;= 4 AND [Calculation_896779277937299464] &gt;= 4 THEN &quot;At-Risk&quot;   // high value but long time since purchase&#13;&#10;ELSEIF [Calculation_896779277937147910] &lt;= 2 AND [Calculation_896779277937221639] &lt;= 2 AND [Calculation_896779277937299464] &lt;= 2 THEN &quot;Churned&quot;&#13;&#10;ELSEIF [Calculation_896779277937147910] &gt;= 4 AND [Calculation_896779277937221639] &lt;= 2 THEN &quot;New/Window-Shopper&quot;&#13;&#10;ELSE &quot;Needs Attention&quot; END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Cluster' datatype='string' name='[Customer ID (clusters)]' parent-model='[AnalyticModel:{fee7b907-12d9-4e64-9b8c-471fc69f63ac}]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Customer ID]' default='&quot;Not Clustered&quot;' new-bin='true'>
+          <bin default-name='false' value='&quot;Cluster 1&quot;'>
+            <value>&quot;CUST-002&quot;</value>
+            <value>&quot;CUST-008&quot;</value>
+            <value>&quot;CUST-015&quot;</value>
+            <value>&quot;CUST-021&quot;</value>
+            <value>&quot;CUST-028&quot;</value>
+            <value>&quot;CUST-033&quot;</value>
+            <value>&quot;CUST-048&quot;</value>
+            <value>&quot;CUST-051&quot;</value>
+            <value>&quot;CUST-054&quot;</value>
+            <value>&quot;CUST-058&quot;</value>
+            <value>&quot;CUST-062&quot;</value>
+            <value>&quot;CUST-063&quot;</value>
+            <value>&quot;CUST-086&quot;</value>
+            <value>&quot;CUST-090&quot;</value>
+            <value>&quot;CUST-092&quot;</value>
+            <value>&quot;CUST-093&quot;</value>
+            <value>&quot;CUST-096&quot;</value>
+            <value>&quot;CUST-099&quot;</value>
+            <value>&quot;CUST-103&quot;</value>
+            <value>&quot;CUST-104&quot;</value>
+            <value>&quot;CUST-113&quot;</value>
+            <value>&quot;CUST-116&quot;</value>
+            <value>&quot;CUST-117&quot;</value>
+            <value>&quot;CUST-124&quot;</value>
+            <value>&quot;CUST-128&quot;</value>
+            <value>&quot;CUST-129&quot;</value>
+            <value>&quot;CUST-130&quot;</value>
+            <value>&quot;CUST-131&quot;</value>
+            <value>&quot;CUST-135&quot;</value>
+            <value>&quot;CUST-144&quot;</value>
+            <value>&quot;CUST-147&quot;</value>
+            <value>&quot;CUST-148&quot;</value>
+            <value>&quot;CUST-152&quot;</value>
+            <value>&quot;CUST-158&quot;</value>
+            <value>&quot;CUST-160&quot;</value>
+            <value>&quot;CUST-161&quot;</value>
+            <value>&quot;CUST-170&quot;</value>
+            <value>&quot;CUST-172&quot;</value>
+            <value>&quot;CUST-187&quot;</value>
+            <value>&quot;CUST-188&quot;</value>
+            <value>&quot;CUST-190&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Cluster 2&quot;'>
+            <value>&quot;CUST-004&quot;</value>
+            <value>&quot;CUST-006&quot;</value>
+            <value>&quot;CUST-007&quot;</value>
+            <value>&quot;CUST-011&quot;</value>
+            <value>&quot;CUST-016&quot;</value>
+            <value>&quot;CUST-017&quot;</value>
+            <value>&quot;CUST-019&quot;</value>
+            <value>&quot;CUST-026&quot;</value>
+            <value>&quot;CUST-030&quot;</value>
+            <value>&quot;CUST-034&quot;</value>
+            <value>&quot;CUST-042&quot;</value>
+            <value>&quot;CUST-043&quot;</value>
+            <value>&quot;CUST-044&quot;</value>
+            <value>&quot;CUST-046&quot;</value>
+            <value>&quot;CUST-047&quot;</value>
+            <value>&quot;CUST-049&quot;</value>
+            <value>&quot;CUST-053&quot;</value>
+            <value>&quot;CUST-057&quot;</value>
+            <value>&quot;CUST-068&quot;</value>
+            <value>&quot;CUST-070&quot;</value>
+            <value>&quot;CUST-071&quot;</value>
+            <value>&quot;CUST-072&quot;</value>
+            <value>&quot;CUST-087&quot;</value>
+            <value>&quot;CUST-094&quot;</value>
+            <value>&quot;CUST-095&quot;</value>
+            <value>&quot;CUST-097&quot;</value>
+            <value>&quot;CUST-100&quot;</value>
+            <value>&quot;CUST-101&quot;</value>
+            <value>&quot;CUST-107&quot;</value>
+            <value>&quot;CUST-109&quot;</value>
+            <value>&quot;CUST-111&quot;</value>
+            <value>&quot;CUST-114&quot;</value>
+            <value>&quot;CUST-115&quot;</value>
+            <value>&quot;CUST-119&quot;</value>
+            <value>&quot;CUST-123&quot;</value>
+            <value>&quot;CUST-125&quot;</value>
+            <value>&quot;CUST-142&quot;</value>
+            <value>&quot;CUST-157&quot;</value>
+            <value>&quot;CUST-159&quot;</value>
+            <value>&quot;CUST-165&quot;</value>
+            <value>&quot;CUST-167&quot;</value>
+            <value>&quot;CUST-169&quot;</value>
+            <value>&quot;CUST-171&quot;</value>
+            <value>&quot;CUST-175&quot;</value>
+            <value>&quot;CUST-178&quot;</value>
+            <value>&quot;CUST-186&quot;</value>
+            <value>&quot;CUST-189&quot;</value>
+            <value>&quot;CUST-192&quot;</value>
+            <value>&quot;CUST-194&quot;</value>
+            <value>&quot;CUST-196&quot;</value>
+            <value>&quot;CUST-197&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Cluster 3&quot;'>
+            <value>&quot;CUST-001&quot;</value>
+            <value>&quot;CUST-003&quot;</value>
+            <value>&quot;CUST-005&quot;</value>
+            <value>&quot;CUST-009&quot;</value>
+            <value>&quot;CUST-012&quot;</value>
+            <value>&quot;CUST-013&quot;</value>
+            <value>&quot;CUST-014&quot;</value>
+            <value>&quot;CUST-018&quot;</value>
+            <value>&quot;CUST-020&quot;</value>
+            <value>&quot;CUST-022&quot;</value>
+            <value>&quot;CUST-023&quot;</value>
+            <value>&quot;CUST-024&quot;</value>
+            <value>&quot;CUST-025&quot;</value>
+            <value>&quot;CUST-027&quot;</value>
+            <value>&quot;CUST-029&quot;</value>
+            <value>&quot;CUST-032&quot;</value>
+            <value>&quot;CUST-035&quot;</value>
+            <value>&quot;CUST-036&quot;</value>
+            <value>&quot;CUST-037&quot;</value>
+            <value>&quot;CUST-038&quot;</value>
+            <value>&quot;CUST-039&quot;</value>
+            <value>&quot;CUST-040&quot;</value>
+            <value>&quot;CUST-041&quot;</value>
+            <value>&quot;CUST-045&quot;</value>
+            <value>&quot;CUST-050&quot;</value>
+            <value>&quot;CUST-052&quot;</value>
+            <value>&quot;CUST-055&quot;</value>
+            <value>&quot;CUST-059&quot;</value>
+            <value>&quot;CUST-060&quot;</value>
+            <value>&quot;CUST-061&quot;</value>
+            <value>&quot;CUST-064&quot;</value>
+            <value>&quot;CUST-065&quot;</value>
+            <value>&quot;CUST-066&quot;</value>
+            <value>&quot;CUST-067&quot;</value>
+            <value>&quot;CUST-069&quot;</value>
+            <value>&quot;CUST-073&quot;</value>
+            <value>&quot;CUST-075&quot;</value>
+            <value>&quot;CUST-081&quot;</value>
+            <value>&quot;CUST-082&quot;</value>
+            <value>&quot;CUST-084&quot;</value>
+            <value>&quot;CUST-088&quot;</value>
+            <value>&quot;CUST-089&quot;</value>
+            <value>&quot;CUST-098&quot;</value>
+            <value>&quot;CUST-106&quot;</value>
+            <value>&quot;CUST-108&quot;</value>
+            <value>&quot;CUST-110&quot;</value>
+            <value>&quot;CUST-112&quot;</value>
+            <value>&quot;CUST-118&quot;</value>
+            <value>&quot;CUST-120&quot;</value>
+            <value>&quot;CUST-121&quot;</value>
+            <value>&quot;CUST-122&quot;</value>
+            <value>&quot;CUST-126&quot;</value>
+            <value>&quot;CUST-127&quot;</value>
+            <value>&quot;CUST-132&quot;</value>
+            <value>&quot;CUST-134&quot;</value>
+            <value>&quot;CUST-136&quot;</value>
+            <value>&quot;CUST-137&quot;</value>
+            <value>&quot;CUST-139&quot;</value>
+            <value>&quot;CUST-140&quot;</value>
+            <value>&quot;CUST-143&quot;</value>
+            <value>&quot;CUST-145&quot;</value>
+            <value>&quot;CUST-146&quot;</value>
+            <value>&quot;CUST-150&quot;</value>
+            <value>&quot;CUST-151&quot;</value>
+            <value>&quot;CUST-153&quot;</value>
+            <value>&quot;CUST-154&quot;</value>
+            <value>&quot;CUST-155&quot;</value>
+            <value>&quot;CUST-162&quot;</value>
+            <value>&quot;CUST-163&quot;</value>
+            <value>&quot;CUST-164&quot;</value>
+            <value>&quot;CUST-166&quot;</value>
+            <value>&quot;CUST-168&quot;</value>
+            <value>&quot;CUST-173&quot;</value>
+            <value>&quot;CUST-174&quot;</value>
+            <value>&quot;CUST-176&quot;</value>
+            <value>&quot;CUST-179&quot;</value>
+            <value>&quot;CUST-180&quot;</value>
+            <value>&quot;CUST-181&quot;</value>
+            <value>&quot;CUST-182&quot;</value>
+            <value>&quot;CUST-183&quot;</value>
+            <value>&quot;CUST-184&quot;</value>
+            <value>&quot;CUST-185&quot;</value>
+            <value>&quot;CUST-191&quot;</value>
+            <value>&quot;CUST-193&quot;</value>
+            <value>&quot;CUST-195&quot;</value>
+            <value>&quot;CUST-198&quot;</value>
+            <value>&quot;CUST-199&quot;</value>
+            <value>&quot;CUST-200&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Customer ID]' role='dimension' type='nominal' />
+      <column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_DFAD3E9B34294016B3362B4D4F758A40]' role='measure' type='quantitative' />
+      <column-instance column='[Customer ID]' derivation='None' name='[none:Customer ID:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_896779277933133824]' derivation='User' name='[usr:Calculation_896779277933133824:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_896779277933928449]' derivation='User' name='[usr:Calculation_896779277933928449:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_896779277934039042]' derivation='User' name='[usr:Calculation_896779277934039042:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ASUS/AppData/Local/Temp/TableauTemp/#TableauTemp_1civo3s1whgxrr14dbws60jlhv5l.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/03/2025 12:03:47 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>180</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_DFAD3E9B34294016B3362B4D4F758A40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Order ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Order ID</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>500</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_DFAD3E9B34294016B3362B4D4F758A40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order Date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Order Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Order Date</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>359</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_DFAD3E9B34294016B3362B4D4F758A40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sales</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>497</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_DFAD3E9B34294016B3362B4D4F758A40]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277934039042:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933133824:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Customer ID (clusters)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Cluster 1&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Cluster 3&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Cluster 2&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[Customer ID (clusters)]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Cluster 1&quot;</bucket>
+            <bucket>&quot;Cluster 2&quot;</bucket>
+            <bucket>&quot;Cluster 3&quot;</bucket>
+            <bucket>&quot;Not Clustered&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Min Monetary' datatype='real' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='0.'>
+          <calculation class='tableau' formula='0.' />
+          <range granularity='100.0' max='10000.0' min='0.0' />
+        </column>
+        <column caption='Start Date' datatype='date' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='#2024-11-03#'>
+          <calculation class='tableau' formula='#2024-11-03#' />
+        </column>
+        <column caption='End Date' datatype='date' name='[Parameter 3]' param-domain-type='any' role='measure' type='quantitative' value='#2025-11-03#'>
+          <calculation class='tableau' formula='#2025-11-03#' />
+        </column>
+      </datasource-dependencies>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{05d4131d-bc26-4487-8d99-faaa5ee67d4b}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933133824:qk]' />
+            <field name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]' />
+            <field name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277934039042:qk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>0</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{fee7b907-12d9-4e64-9b8c-471fc69f63ac}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933133824:qk]' />
+            <field name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]' />
+            <field name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277934039042:qk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields>
+            <field name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Customer ID:nk]' />
+          </lod-fields>
+          <number-of-desired-clusters>0</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
+      <object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_DFAD3E9B34294016B3362B4D4F758A40'>
+            <properties context=''>
+              <relation connection='excel-direct.0b0mea60plxslb17euiqh0hr8zg9' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:D501:no:A1:D501:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Customer ID' ordinal='0' />
+                  <column datatype='string' name='Order ID' ordinal='1' />
+                  <column datatype='datetime' name='Order Date' ordinal='2' />
+                  <column datatype='real' name='Sales' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_678E9915BD094002BF3D3B49D8ECC4F1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 2' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Clusters' />
+        <param name='target' value='Sheet 2' />
+      </command>
+    </action>
+    <action caption='Highlight 2 (generated)' name='[Action2_E902154CF8C74E0685711E13033D49C0]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Clusters' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (customer_segmentation_sample)' name='federated.0vg4qmc0c70ahv1bs7ro01uwk58p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vg4qmc0c70ahv1bs7ro01uwk58p'>
+            <column caption='Recency (Days)' datatype='integer' name='[Calculation_896779277933133824]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;, MAX([Order Date]), TODAY())' />
+            </column>
+            <column caption='Frequency' datatype='integer' name='[Calculation_896779277933928449]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Order ID])' />
+            </column>
+            <column caption='Monetary' datatype='real' name='[Calculation_896779277934039042]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Sales])' />
+            </column>
+            <column caption='R_pct' datatype='real' name='[Calculation_896779277935079427]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1 - RANK_PERCENTILE([Calculation_896779277933133824])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='F_pct' datatype='real' name='[Calculation_896779277935378436]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_PERCENTILE([Calculation_896779277933928449])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='M_pct' datatype='real' name='[Calculation_896779277935480837]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_PERCENTILE([Calculation_896779277934039042])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='R_score' datatype='integer' name='[Calculation_896779277937147910]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_896779277935079427] &gt;= 0.8 THEN 5&#13;&#10;ELSEIF [Calculation_896779277935079427] &gt;= 0.6 THEN 4&#13;&#10;ELSEIF [Calculation_896779277935079427] &gt;= 0.4 THEN 3&#13;&#10;ELSEIF [Calculation_896779277935079427] &gt;= 0.2 THEN 2&#13;&#10;ELSE 1&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='F_score' datatype='integer' name='[Calculation_896779277937221639]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_896779277935378436] &gt;= 0.8 THEN 5&#13;&#10;ELSEIF [Calculation_896779277935378436] &gt;= 0.6 THEN 4&#13;&#10;ELSEIF [Calculation_896779277935378436] &gt;= 0.4 THEN 3&#13;&#10;ELSEIF [Calculation_896779277935378436] &gt;= 0.2 THEN 2&#13;&#10;ELSE 1&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='M_score' datatype='integer' name='[Calculation_896779277937299464]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_896779277935480837] &gt;= 0.8 THEN 5&#13;&#10;ELSEIF [Calculation_896779277935480837] &gt;= 0.6 THEN 4&#13;&#10;ELSEIF [Calculation_896779277935480837] &gt;= 0.4 THEN 3&#13;&#10;ELSEIF [Calculation_896779277935480837] &gt;= 0.2 THEN 2&#13;&#10;ELSE 1&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Customer ID]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Order ID]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Customer ID]' derivation='None' name='[none:Customer ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_896779277933133824]' derivation='User' name='[usr:Calculation_896779277933133824:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277933928449]' derivation='User' name='[usr:Calculation_896779277933928449:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277934039042]' derivation='User' name='[usr:Calculation_896779277934039042:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277935079427]' derivation='User' name='[usr:Calculation_896779277935079427:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_896779277935378436]' derivation='User' name='[usr:Calculation_896779277935378436:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_896779277935480837]' derivation='User' name='[usr:Calculation_896779277935480837:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_896779277937147910]' derivation='User' name='[usr:Calculation_896779277937147910:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+              <table-calc field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Calculation_896779277935079427]' ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_896779277937221639]' derivation='User' name='[usr:Calculation_896779277937221639:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+              <table-calc field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Calculation_896779277935378436]' ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_896779277937299464]' derivation='User' name='[usr:Calculation_896779277937299464:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+              <table-calc field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Calculation_896779277935480837]' ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277934039042:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933133824:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933133824:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277935378436:qk:1]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277935480837:qk:1]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277935079427:qk:1]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277937147910:qk:2]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277937299464:qk:2]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277937221639:qk:2]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Multiple Values]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Customer ID:nk]</rows>
+        <cols>([federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Multiple Values] + ([federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277935378436:qk:1] + ([federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277935480837:qk:1] + ([federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277935079427:qk:1] + ([federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277937147910:qk:2] + ([federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277937299464:qk:2] + [federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277937221639:qk:2]))))))</cols>
+      </table>
+      <simple-id uuid='{F38B412B-EDAF-408C-86DE-FCFA0D5BA0C5}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (customer_segmentation_sample)' name='federated.0vg4qmc0c70ahv1bs7ro01uwk58p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vg4qmc0c70ahv1bs7ro01uwk58p'>
+            <column auto-hidden='true' caption='Clusters' datatype='integer' hidden='true' is-adhoc-cluster='true' name='[AdhocCluster:1]' parent-model='[AnalyticModel:{05d4131d-bc26-4487-8d99-faaa5ee67d4b}]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='-1' value='Cluster Outliers' />
+                <alias key='0' value='Not Clustered' />
+                <alias key='1' value='Cluster 1' />
+                <alias key='2' value='Cluster 2' />
+                <alias key='3' value='Cluster 3' />
+                <alias key='4' value='Cluster 4' />
+                <alias key='5' value='Cluster 5' />
+                <alias key='6' value='Cluster 6' />
+                <alias key='7' value='Cluster 7' />
+                <alias key='8' value='Cluster 8' />
+                <alias key='9' value='Cluster 9' />
+                <alias key='10' value='Cluster 10' />
+                <alias key='11' value='Cluster 11' />
+                <alias key='12' value='Cluster 12' />
+                <alias key='13' value='Cluster 13' />
+                <alias key='14' value='Cluster 14' />
+                <alias key='15' value='Cluster 15' />
+                <alias key='16' value='Cluster 16' />
+                <alias key='17' value='Cluster 17' />
+                <alias key='18' value='Cluster 18' />
+                <alias key='19' value='Cluster 19' />
+                <alias key='20' value='Cluster 20' />
+                <alias key='21' value='Cluster 21' />
+                <alias key='22' value='Cluster 22' />
+                <alias key='23' value='Cluster 23' />
+                <alias key='24' value='Cluster 24' />
+                <alias key='25' value='Cluster 25' />
+                <alias key='26' value='Cluster 26' />
+                <alias key='27' value='Cluster 27' />
+                <alias key='28' value='Cluster 28' />
+                <alias key='29' value='Cluster 29' />
+                <alias key='30' value='Cluster 30' />
+                <alias key='31' value='Cluster 31' />
+                <alias key='32' value='Cluster 32' />
+                <alias key='33' value='Cluster 33' />
+                <alias key='34' value='Cluster 34' />
+                <alias key='35' value='Cluster 35' />
+                <alias key='36' value='Cluster 36' />
+                <alias key='37' value='Cluster 37' />
+                <alias key='38' value='Cluster 38' />
+                <alias key='39' value='Cluster 39' />
+                <alias key='40' value='Cluster 40' />
+                <alias key='41' value='Cluster 41' />
+                <alias key='42' value='Cluster 42' />
+                <alias key='43' value='Cluster 43' />
+                <alias key='44' value='Cluster 44' />
+                <alias key='45' value='Cluster 45' />
+                <alias key='46' value='Cluster 46' />
+                <alias key='47' value='Cluster 47' />
+                <alias key='48' value='Cluster 48' />
+                <alias key='49' value='Cluster 49' />
+                <alias key='50' value='Cluster 50' />
+              </aliases>
+            </column>
+            <column caption='Recency (Days)' datatype='integer' name='[Calculation_896779277933133824]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;, MAX([Order Date]), TODAY())' />
+            </column>
+            <column caption='Frequency' datatype='integer' name='[Calculation_896779277933928449]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Order ID])' />
+            </column>
+            <column caption='Monetary' datatype='real' name='[Calculation_896779277934039042]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Sales])' />
+            </column>
+            <column datatype='string' name='[Customer ID]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Order ID]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[AdhocCluster:1]' derivation='None' is-adhoc-cluster='true' name='[none:AdhocCluster:1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Customer ID]' derivation='None' name='[none:Customer ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_896779277933133824]' derivation='User' name='[usr:Calculation_896779277933133824:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277933928449]' derivation='User' name='[usr:Calculation_896779277933928449:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277934039042]' derivation='User' name='[usr:Calculation_896779277934039042:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Customer ID:nk]' />
+              <lod column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933133824:qk]' />
+              <color column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:AdhocCluster:1:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277934039042:qk]</rows>
+        <cols>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]</cols>
+      </table>
+      <simple-id uuid='{E05C50AA-200A-4291-B181-550FF628397C}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (customer_segmentation_sample)' name='federated.0vg4qmc0c70ahv1bs7ro01uwk58p' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Min Monetary' datatype='real' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='0.'>
+              <calculation class='tableau' formula='0.' />
+              <range granularity='100.0' max='10000.0' min='0.0' />
+            </column>
+            <column caption='Start Date' datatype='date' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='#2024-11-03#'>
+              <calculation class='tableau' formula='#2024-11-03#' />
+            </column>
+            <column caption='End Date' datatype='date' name='[Parameter 3]' param-domain-type='any' role='measure' type='quantitative' value='#2025-11-03#'>
+              <calculation class='tableau' formula='#2025-11-03#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0vg4qmc0c70ahv1bs7ro01uwk58p'>
+            <column caption='Recency (Days)' datatype='integer' name='[Calculation_896779277933133824]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;, MAX([Order Date]), TODAY())' />
+            </column>
+            <column caption='Frequency' datatype='integer' name='[Calculation_896779277933928449]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Order ID])' />
+            </column>
+            <column caption='Monetary' datatype='real' name='[Calculation_896779277934039042]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Sales])' />
+            </column>
+            <column caption='R_pct' datatype='real' name='[Calculation_896779277935079427]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1 - RANK_PERCENTILE([Calculation_896779277933133824])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='F_pct' datatype='real' name='[Calculation_896779277935378436]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_PERCENTILE([Calculation_896779277933928449])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='M_pct' datatype='real' name='[Calculation_896779277935480837]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_PERCENTILE([Calculation_896779277934039042])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='R_score' datatype='integer' name='[Calculation_896779277937147910]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_896779277935079427] &gt;= 0.8 THEN 5&#13;&#10;ELSEIF [Calculation_896779277935079427] &gt;= 0.6 THEN 4&#13;&#10;ELSEIF [Calculation_896779277935079427] &gt;= 0.4 THEN 3&#13;&#10;ELSEIF [Calculation_896779277935079427] &gt;= 0.2 THEN 2&#13;&#10;ELSE 1&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='F_score' datatype='integer' name='[Calculation_896779277937221639]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_896779277935378436] &gt;= 0.8 THEN 5&#13;&#10;ELSEIF [Calculation_896779277935378436] &gt;= 0.6 THEN 4&#13;&#10;ELSEIF [Calculation_896779277935378436] &gt;= 0.4 THEN 3&#13;&#10;ELSEIF [Calculation_896779277935378436] &gt;= 0.2 THEN 2&#13;&#10;ELSE 1&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='M_score' datatype='integer' name='[Calculation_896779277937299464]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_896779277935480837] &gt;= 0.8 THEN 5&#13;&#10;ELSEIF [Calculation_896779277935480837] &gt;= 0.6 THEN 4&#13;&#10;ELSEIF [Calculation_896779277935480837] &gt;= 0.4 THEN 3&#13;&#10;ELSEIF [Calculation_896779277935480837] &gt;= 0.2 THEN 2&#13;&#10;ELSE 1&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='RFM_Score' datatype='integer' name='[Calculation_896779277937590281]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INT([Calculation_896779277937147910]) * 100&#13;&#10;+ INT([Calculation_896779277937221639]) * 10&#13;&#10;+ INT([Calculation_896779277937299464])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Monetary Filter' datatype='boolean' name='[Calculation_896779278075015178]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_896779277934039042] &gt;= [Parameters].[Parameter 1]' />
+            </column>
+            <column caption='Date Range Filter' datatype='boolean' name='[Calculation_896779278076141579]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Order Date] &gt;= [Parameters].[Parameter 2] AND [Order Date] &lt;= [Parameters].[Parameter 3]' />
+            </column>
+            <column caption='Cluster' datatype='string' name='[Customer ID (clusters)]' parent-model='[AnalyticModel:{fee7b907-12d9-4e64-9b8c-471fc69f63ac}]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Customer ID]' default='&quot;Not Clustered&quot;' new-bin='true'>
+                <bin default-name='false' value='&quot;Cluster 1&quot;'>
+                  <value>&quot;CUST-002&quot;</value>
+                  <value>&quot;CUST-008&quot;</value>
+                  <value>&quot;CUST-015&quot;</value>
+                  <value>&quot;CUST-021&quot;</value>
+                  <value>&quot;CUST-028&quot;</value>
+                  <value>&quot;CUST-033&quot;</value>
+                  <value>&quot;CUST-048&quot;</value>
+                  <value>&quot;CUST-051&quot;</value>
+                  <value>&quot;CUST-054&quot;</value>
+                  <value>&quot;CUST-058&quot;</value>
+                  <value>&quot;CUST-062&quot;</value>
+                  <value>&quot;CUST-063&quot;</value>
+                  <value>&quot;CUST-086&quot;</value>
+                  <value>&quot;CUST-090&quot;</value>
+                  <value>&quot;CUST-092&quot;</value>
+                  <value>&quot;CUST-093&quot;</value>
+                  <value>&quot;CUST-096&quot;</value>
+                  <value>&quot;CUST-099&quot;</value>
+                  <value>&quot;CUST-103&quot;</value>
+                  <value>&quot;CUST-104&quot;</value>
+                  <value>&quot;CUST-113&quot;</value>
+                  <value>&quot;CUST-116&quot;</value>
+                  <value>&quot;CUST-117&quot;</value>
+                  <value>&quot;CUST-124&quot;</value>
+                  <value>&quot;CUST-128&quot;</value>
+                  <value>&quot;CUST-129&quot;</value>
+                  <value>&quot;CUST-130&quot;</value>
+                  <value>&quot;CUST-131&quot;</value>
+                  <value>&quot;CUST-135&quot;</value>
+                  <value>&quot;CUST-144&quot;</value>
+                  <value>&quot;CUST-147&quot;</value>
+                  <value>&quot;CUST-148&quot;</value>
+                  <value>&quot;CUST-152&quot;</value>
+                  <value>&quot;CUST-158&quot;</value>
+                  <value>&quot;CUST-160&quot;</value>
+                  <value>&quot;CUST-161&quot;</value>
+                  <value>&quot;CUST-170&quot;</value>
+                  <value>&quot;CUST-172&quot;</value>
+                  <value>&quot;CUST-187&quot;</value>
+                  <value>&quot;CUST-188&quot;</value>
+                  <value>&quot;CUST-190&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Cluster 2&quot;'>
+                  <value>&quot;CUST-004&quot;</value>
+                  <value>&quot;CUST-006&quot;</value>
+                  <value>&quot;CUST-007&quot;</value>
+                  <value>&quot;CUST-011&quot;</value>
+                  <value>&quot;CUST-016&quot;</value>
+                  <value>&quot;CUST-017&quot;</value>
+                  <value>&quot;CUST-019&quot;</value>
+                  <value>&quot;CUST-026&quot;</value>
+                  <value>&quot;CUST-030&quot;</value>
+                  <value>&quot;CUST-034&quot;</value>
+                  <value>&quot;CUST-042&quot;</value>
+                  <value>&quot;CUST-043&quot;</value>
+                  <value>&quot;CUST-044&quot;</value>
+                  <value>&quot;CUST-046&quot;</value>
+                  <value>&quot;CUST-047&quot;</value>
+                  <value>&quot;CUST-049&quot;</value>
+                  <value>&quot;CUST-053&quot;</value>
+                  <value>&quot;CUST-057&quot;</value>
+                  <value>&quot;CUST-068&quot;</value>
+                  <value>&quot;CUST-070&quot;</value>
+                  <value>&quot;CUST-071&quot;</value>
+                  <value>&quot;CUST-072&quot;</value>
+                  <value>&quot;CUST-087&quot;</value>
+                  <value>&quot;CUST-094&quot;</value>
+                  <value>&quot;CUST-095&quot;</value>
+                  <value>&quot;CUST-097&quot;</value>
+                  <value>&quot;CUST-100&quot;</value>
+                  <value>&quot;CUST-101&quot;</value>
+                  <value>&quot;CUST-107&quot;</value>
+                  <value>&quot;CUST-109&quot;</value>
+                  <value>&quot;CUST-111&quot;</value>
+                  <value>&quot;CUST-114&quot;</value>
+                  <value>&quot;CUST-115&quot;</value>
+                  <value>&quot;CUST-119&quot;</value>
+                  <value>&quot;CUST-123&quot;</value>
+                  <value>&quot;CUST-125&quot;</value>
+                  <value>&quot;CUST-142&quot;</value>
+                  <value>&quot;CUST-157&quot;</value>
+                  <value>&quot;CUST-159&quot;</value>
+                  <value>&quot;CUST-165&quot;</value>
+                  <value>&quot;CUST-167&quot;</value>
+                  <value>&quot;CUST-169&quot;</value>
+                  <value>&quot;CUST-171&quot;</value>
+                  <value>&quot;CUST-175&quot;</value>
+                  <value>&quot;CUST-178&quot;</value>
+                  <value>&quot;CUST-186&quot;</value>
+                  <value>&quot;CUST-189&quot;</value>
+                  <value>&quot;CUST-192&quot;</value>
+                  <value>&quot;CUST-194&quot;</value>
+                  <value>&quot;CUST-196&quot;</value>
+                  <value>&quot;CUST-197&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Cluster 3&quot;'>
+                  <value>&quot;CUST-001&quot;</value>
+                  <value>&quot;CUST-003&quot;</value>
+                  <value>&quot;CUST-005&quot;</value>
+                  <value>&quot;CUST-009&quot;</value>
+                  <value>&quot;CUST-012&quot;</value>
+                  <value>&quot;CUST-013&quot;</value>
+                  <value>&quot;CUST-014&quot;</value>
+                  <value>&quot;CUST-018&quot;</value>
+                  <value>&quot;CUST-020&quot;</value>
+                  <value>&quot;CUST-022&quot;</value>
+                  <value>&quot;CUST-023&quot;</value>
+                  <value>&quot;CUST-024&quot;</value>
+                  <value>&quot;CUST-025&quot;</value>
+                  <value>&quot;CUST-027&quot;</value>
+                  <value>&quot;CUST-029&quot;</value>
+                  <value>&quot;CUST-032&quot;</value>
+                  <value>&quot;CUST-035&quot;</value>
+                  <value>&quot;CUST-036&quot;</value>
+                  <value>&quot;CUST-037&quot;</value>
+                  <value>&quot;CUST-038&quot;</value>
+                  <value>&quot;CUST-039&quot;</value>
+                  <value>&quot;CUST-040&quot;</value>
+                  <value>&quot;CUST-041&quot;</value>
+                  <value>&quot;CUST-045&quot;</value>
+                  <value>&quot;CUST-050&quot;</value>
+                  <value>&quot;CUST-052&quot;</value>
+                  <value>&quot;CUST-055&quot;</value>
+                  <value>&quot;CUST-059&quot;</value>
+                  <value>&quot;CUST-060&quot;</value>
+                  <value>&quot;CUST-061&quot;</value>
+                  <value>&quot;CUST-064&quot;</value>
+                  <value>&quot;CUST-065&quot;</value>
+                  <value>&quot;CUST-066&quot;</value>
+                  <value>&quot;CUST-067&quot;</value>
+                  <value>&quot;CUST-069&quot;</value>
+                  <value>&quot;CUST-073&quot;</value>
+                  <value>&quot;CUST-075&quot;</value>
+                  <value>&quot;CUST-081&quot;</value>
+                  <value>&quot;CUST-082&quot;</value>
+                  <value>&quot;CUST-084&quot;</value>
+                  <value>&quot;CUST-088&quot;</value>
+                  <value>&quot;CUST-089&quot;</value>
+                  <value>&quot;CUST-098&quot;</value>
+                  <value>&quot;CUST-106&quot;</value>
+                  <value>&quot;CUST-108&quot;</value>
+                  <value>&quot;CUST-110&quot;</value>
+                  <value>&quot;CUST-112&quot;</value>
+                  <value>&quot;CUST-118&quot;</value>
+                  <value>&quot;CUST-120&quot;</value>
+                  <value>&quot;CUST-121&quot;</value>
+                  <value>&quot;CUST-122&quot;</value>
+                  <value>&quot;CUST-126&quot;</value>
+                  <value>&quot;CUST-127&quot;</value>
+                  <value>&quot;CUST-132&quot;</value>
+                  <value>&quot;CUST-134&quot;</value>
+                  <value>&quot;CUST-136&quot;</value>
+                  <value>&quot;CUST-137&quot;</value>
+                  <value>&quot;CUST-139&quot;</value>
+                  <value>&quot;CUST-140&quot;</value>
+                  <value>&quot;CUST-143&quot;</value>
+                  <value>&quot;CUST-145&quot;</value>
+                  <value>&quot;CUST-146&quot;</value>
+                  <value>&quot;CUST-150&quot;</value>
+                  <value>&quot;CUST-151&quot;</value>
+                  <value>&quot;CUST-153&quot;</value>
+                  <value>&quot;CUST-154&quot;</value>
+                  <value>&quot;CUST-155&quot;</value>
+                  <value>&quot;CUST-162&quot;</value>
+                  <value>&quot;CUST-163&quot;</value>
+                  <value>&quot;CUST-164&quot;</value>
+                  <value>&quot;CUST-166&quot;</value>
+                  <value>&quot;CUST-168&quot;</value>
+                  <value>&quot;CUST-173&quot;</value>
+                  <value>&quot;CUST-174&quot;</value>
+                  <value>&quot;CUST-176&quot;</value>
+                  <value>&quot;CUST-179&quot;</value>
+                  <value>&quot;CUST-180&quot;</value>
+                  <value>&quot;CUST-181&quot;</value>
+                  <value>&quot;CUST-182&quot;</value>
+                  <value>&quot;CUST-183&quot;</value>
+                  <value>&quot;CUST-184&quot;</value>
+                  <value>&quot;CUST-185&quot;</value>
+                  <value>&quot;CUST-191&quot;</value>
+                  <value>&quot;CUST-193&quot;</value>
+                  <value>&quot;CUST-195&quot;</value>
+                  <value>&quot;CUST-198&quot;</value>
+                  <value>&quot;CUST-199&quot;</value>
+                  <value>&quot;CUST-200&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Customer ID]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Order ID]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_896779278076141579]' derivation='None' name='[none:Calculation_896779278076141579:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Customer ID]' derivation='None' name='[none:Customer ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_896779277933133824]' derivation='User' name='[usr:Calculation_896779277933133824:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277933928449]' derivation='User' name='[usr:Calculation_896779277933928449:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277934039042]' derivation='User' name='[usr:Calculation_896779277934039042:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277937590281]' derivation='User' name='[usr:Calculation_896779277937590281:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Calculation_896779277937147910]' ordering-type='Rows' />
+              <table-calc field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Calculation_896779277937299464]' ordering-type='Rows' />
+              <table-calc field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Calculation_896779277935079427]' ordering-type='Rows' />
+              <table-calc field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Calculation_896779277937221639]' ordering-type='Rows' />
+              <table-calc field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Calculation_896779277935378436]' ordering-type='Rows' />
+              <table-calc field='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Calculation_896779277935480837]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_896779278075015178]' derivation='User' name='[usr:Calculation_896779278075015178:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]'>
+            <groupfilter function='level-members' level='[Customer ID (clusters)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Calculation_896779278076141579:nk]'>
+            <groupfilter function='member' level='[none:Calculation_896779278076141579:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779278075015178:nk]'>
+            <groupfilter function='member' level='[usr:Calculation_896779278075015178:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Calculation_896779278076141579:nk]</column>
+            <column>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779278075015178:nk]</column>
+            <column>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]' />
+              <size column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]' />
+              <lod column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Customer ID:nk]' />
+              <lod column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277937590281:qk]' />
+              <lod column='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277934039042:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277934039042:qk]</rows>
+        <cols>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]</cols>
+      </table>
+      <simple-id uuid='{E55AE88D-F370-4E88-A3C7-4EC7568EFDE3}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (customer_segmentation_sample)' name='federated.0vg4qmc0c70ahv1bs7ro01uwk58p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vg4qmc0c70ahv1bs7ro01uwk58p'>
+            <column caption='Recency (Days)' datatype='integer' name='[Calculation_896779277933133824]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;, MAX([Order Date]), TODAY())' />
+            </column>
+            <column caption='Frequency' datatype='integer' name='[Calculation_896779277933928449]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Order ID])' />
+            </column>
+            <column caption='Monetary' datatype='real' name='[Calculation_896779277934039042]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Sales])' />
+            </column>
+            <column caption='Cluster' datatype='string' name='[Customer ID (clusters)]' parent-model='[AnalyticModel:{fee7b907-12d9-4e64-9b8c-471fc69f63ac}]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Customer ID]' default='&quot;Not Clustered&quot;' new-bin='true'>
+                <bin default-name='false' value='&quot;Cluster 1&quot;'>
+                  <value>&quot;CUST-002&quot;</value>
+                  <value>&quot;CUST-008&quot;</value>
+                  <value>&quot;CUST-015&quot;</value>
+                  <value>&quot;CUST-021&quot;</value>
+                  <value>&quot;CUST-028&quot;</value>
+                  <value>&quot;CUST-033&quot;</value>
+                  <value>&quot;CUST-048&quot;</value>
+                  <value>&quot;CUST-051&quot;</value>
+                  <value>&quot;CUST-054&quot;</value>
+                  <value>&quot;CUST-058&quot;</value>
+                  <value>&quot;CUST-062&quot;</value>
+                  <value>&quot;CUST-063&quot;</value>
+                  <value>&quot;CUST-086&quot;</value>
+                  <value>&quot;CUST-090&quot;</value>
+                  <value>&quot;CUST-092&quot;</value>
+                  <value>&quot;CUST-093&quot;</value>
+                  <value>&quot;CUST-096&quot;</value>
+                  <value>&quot;CUST-099&quot;</value>
+                  <value>&quot;CUST-103&quot;</value>
+                  <value>&quot;CUST-104&quot;</value>
+                  <value>&quot;CUST-113&quot;</value>
+                  <value>&quot;CUST-116&quot;</value>
+                  <value>&quot;CUST-117&quot;</value>
+                  <value>&quot;CUST-124&quot;</value>
+                  <value>&quot;CUST-128&quot;</value>
+                  <value>&quot;CUST-129&quot;</value>
+                  <value>&quot;CUST-130&quot;</value>
+                  <value>&quot;CUST-131&quot;</value>
+                  <value>&quot;CUST-135&quot;</value>
+                  <value>&quot;CUST-144&quot;</value>
+                  <value>&quot;CUST-147&quot;</value>
+                  <value>&quot;CUST-148&quot;</value>
+                  <value>&quot;CUST-152&quot;</value>
+                  <value>&quot;CUST-158&quot;</value>
+                  <value>&quot;CUST-160&quot;</value>
+                  <value>&quot;CUST-161&quot;</value>
+                  <value>&quot;CUST-170&quot;</value>
+                  <value>&quot;CUST-172&quot;</value>
+                  <value>&quot;CUST-187&quot;</value>
+                  <value>&quot;CUST-188&quot;</value>
+                  <value>&quot;CUST-190&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Cluster 2&quot;'>
+                  <value>&quot;CUST-004&quot;</value>
+                  <value>&quot;CUST-006&quot;</value>
+                  <value>&quot;CUST-007&quot;</value>
+                  <value>&quot;CUST-011&quot;</value>
+                  <value>&quot;CUST-016&quot;</value>
+                  <value>&quot;CUST-017&quot;</value>
+                  <value>&quot;CUST-019&quot;</value>
+                  <value>&quot;CUST-026&quot;</value>
+                  <value>&quot;CUST-030&quot;</value>
+                  <value>&quot;CUST-034&quot;</value>
+                  <value>&quot;CUST-042&quot;</value>
+                  <value>&quot;CUST-043&quot;</value>
+                  <value>&quot;CUST-044&quot;</value>
+                  <value>&quot;CUST-046&quot;</value>
+                  <value>&quot;CUST-047&quot;</value>
+                  <value>&quot;CUST-049&quot;</value>
+                  <value>&quot;CUST-053&quot;</value>
+                  <value>&quot;CUST-057&quot;</value>
+                  <value>&quot;CUST-068&quot;</value>
+                  <value>&quot;CUST-070&quot;</value>
+                  <value>&quot;CUST-071&quot;</value>
+                  <value>&quot;CUST-072&quot;</value>
+                  <value>&quot;CUST-087&quot;</value>
+                  <value>&quot;CUST-094&quot;</value>
+                  <value>&quot;CUST-095&quot;</value>
+                  <value>&quot;CUST-097&quot;</value>
+                  <value>&quot;CUST-100&quot;</value>
+                  <value>&quot;CUST-101&quot;</value>
+                  <value>&quot;CUST-107&quot;</value>
+                  <value>&quot;CUST-109&quot;</value>
+                  <value>&quot;CUST-111&quot;</value>
+                  <value>&quot;CUST-114&quot;</value>
+                  <value>&quot;CUST-115&quot;</value>
+                  <value>&quot;CUST-119&quot;</value>
+                  <value>&quot;CUST-123&quot;</value>
+                  <value>&quot;CUST-125&quot;</value>
+                  <value>&quot;CUST-142&quot;</value>
+                  <value>&quot;CUST-157&quot;</value>
+                  <value>&quot;CUST-159&quot;</value>
+                  <value>&quot;CUST-165&quot;</value>
+                  <value>&quot;CUST-167&quot;</value>
+                  <value>&quot;CUST-169&quot;</value>
+                  <value>&quot;CUST-171&quot;</value>
+                  <value>&quot;CUST-175&quot;</value>
+                  <value>&quot;CUST-178&quot;</value>
+                  <value>&quot;CUST-186&quot;</value>
+                  <value>&quot;CUST-189&quot;</value>
+                  <value>&quot;CUST-192&quot;</value>
+                  <value>&quot;CUST-194&quot;</value>
+                  <value>&quot;CUST-196&quot;</value>
+                  <value>&quot;CUST-197&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Cluster 3&quot;'>
+                  <value>&quot;CUST-001&quot;</value>
+                  <value>&quot;CUST-003&quot;</value>
+                  <value>&quot;CUST-005&quot;</value>
+                  <value>&quot;CUST-009&quot;</value>
+                  <value>&quot;CUST-012&quot;</value>
+                  <value>&quot;CUST-013&quot;</value>
+                  <value>&quot;CUST-014&quot;</value>
+                  <value>&quot;CUST-018&quot;</value>
+                  <value>&quot;CUST-020&quot;</value>
+                  <value>&quot;CUST-022&quot;</value>
+                  <value>&quot;CUST-023&quot;</value>
+                  <value>&quot;CUST-024&quot;</value>
+                  <value>&quot;CUST-025&quot;</value>
+                  <value>&quot;CUST-027&quot;</value>
+                  <value>&quot;CUST-029&quot;</value>
+                  <value>&quot;CUST-032&quot;</value>
+                  <value>&quot;CUST-035&quot;</value>
+                  <value>&quot;CUST-036&quot;</value>
+                  <value>&quot;CUST-037&quot;</value>
+                  <value>&quot;CUST-038&quot;</value>
+                  <value>&quot;CUST-039&quot;</value>
+                  <value>&quot;CUST-040&quot;</value>
+                  <value>&quot;CUST-041&quot;</value>
+                  <value>&quot;CUST-045&quot;</value>
+                  <value>&quot;CUST-050&quot;</value>
+                  <value>&quot;CUST-052&quot;</value>
+                  <value>&quot;CUST-055&quot;</value>
+                  <value>&quot;CUST-059&quot;</value>
+                  <value>&quot;CUST-060&quot;</value>
+                  <value>&quot;CUST-061&quot;</value>
+                  <value>&quot;CUST-064&quot;</value>
+                  <value>&quot;CUST-065&quot;</value>
+                  <value>&quot;CUST-066&quot;</value>
+                  <value>&quot;CUST-067&quot;</value>
+                  <value>&quot;CUST-069&quot;</value>
+                  <value>&quot;CUST-073&quot;</value>
+                  <value>&quot;CUST-075&quot;</value>
+                  <value>&quot;CUST-081&quot;</value>
+                  <value>&quot;CUST-082&quot;</value>
+                  <value>&quot;CUST-084&quot;</value>
+                  <value>&quot;CUST-088&quot;</value>
+                  <value>&quot;CUST-089&quot;</value>
+                  <value>&quot;CUST-098&quot;</value>
+                  <value>&quot;CUST-106&quot;</value>
+                  <value>&quot;CUST-108&quot;</value>
+                  <value>&quot;CUST-110&quot;</value>
+                  <value>&quot;CUST-112&quot;</value>
+                  <value>&quot;CUST-118&quot;</value>
+                  <value>&quot;CUST-120&quot;</value>
+                  <value>&quot;CUST-121&quot;</value>
+                  <value>&quot;CUST-122&quot;</value>
+                  <value>&quot;CUST-126&quot;</value>
+                  <value>&quot;CUST-127&quot;</value>
+                  <value>&quot;CUST-132&quot;</value>
+                  <value>&quot;CUST-134&quot;</value>
+                  <value>&quot;CUST-136&quot;</value>
+                  <value>&quot;CUST-137&quot;</value>
+                  <value>&quot;CUST-139&quot;</value>
+                  <value>&quot;CUST-140&quot;</value>
+                  <value>&quot;CUST-143&quot;</value>
+                  <value>&quot;CUST-145&quot;</value>
+                  <value>&quot;CUST-146&quot;</value>
+                  <value>&quot;CUST-150&quot;</value>
+                  <value>&quot;CUST-151&quot;</value>
+                  <value>&quot;CUST-153&quot;</value>
+                  <value>&quot;CUST-154&quot;</value>
+                  <value>&quot;CUST-155&quot;</value>
+                  <value>&quot;CUST-162&quot;</value>
+                  <value>&quot;CUST-163&quot;</value>
+                  <value>&quot;CUST-164&quot;</value>
+                  <value>&quot;CUST-166&quot;</value>
+                  <value>&quot;CUST-168&quot;</value>
+                  <value>&quot;CUST-173&quot;</value>
+                  <value>&quot;CUST-174&quot;</value>
+                  <value>&quot;CUST-176&quot;</value>
+                  <value>&quot;CUST-179&quot;</value>
+                  <value>&quot;CUST-180&quot;</value>
+                  <value>&quot;CUST-181&quot;</value>
+                  <value>&quot;CUST-182&quot;</value>
+                  <value>&quot;CUST-183&quot;</value>
+                  <value>&quot;CUST-184&quot;</value>
+                  <value>&quot;CUST-185&quot;</value>
+                  <value>&quot;CUST-191&quot;</value>
+                  <value>&quot;CUST-193&quot;</value>
+                  <value>&quot;CUST-195&quot;</value>
+                  <value>&quot;CUST-198&quot;</value>
+                  <value>&quot;CUST-199&quot;</value>
+                  <value>&quot;CUST-200&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Customer ID]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Order ID]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Customer ID]' derivation='None' name='[none:Customer ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_896779277933133824]' derivation='User' name='[usr:Calculation_896779277933133824:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277933928449]' derivation='User' name='[usr:Calculation_896779277933928449:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_896779277934039042]' derivation='User' name='[usr:Calculation_896779277934039042:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933133824:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277934039042:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Customer ID:nk] * ([federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933133824:qk] + ([federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk] + [federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277934039042:qk])))</rows>
+        <cols>[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]</cols>
+      </table>
+      <simple-id uuid='{602405B0-0B18-4175-B092-8486E6B9B0CB}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='Sheet1 (customer_segmentation_sample)' name='federated.0vg4qmc0c70ahv1bs7ro01uwk58p' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Min Monetary' datatype='real' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='0.'>
+          <calculation class='tableau' formula='0.' />
+          <range granularity='100.0' max='10000.0' min='0.0' />
+        </column>
+        <column caption='Start Date' datatype='date' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='#2024-11-03#'>
+          <calculation class='tableau' formula='#2024-11-03#' />
+        </column>
+        <column caption='End Date' datatype='date' name='[Parameter 3]' param-domain-type='any' role='measure' type='quantitative' value='#2025-11-03#'>
+          <calculation class='tableau' formula='#2025-11-03#' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.0vg4qmc0c70ahv1bs7ro01uwk58p'>
+        <column caption='Date Range Filter' datatype='boolean' name='[Calculation_896779278076141579]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='[Order Date] &gt;= [Parameters].[Parameter 2] AND [Order Date] &lt;= [Parameters].[Parameter 3]' />
+        </column>
+        <column caption='Cluster' datatype='string' name='[Customer ID (clusters)]' parent-model='[AnalyticModel:{fee7b907-12d9-4e64-9b8c-471fc69f63ac}]' role='dimension' type='nominal'>
+          <calculation class='categorical-bin' column='[Customer ID]' default='&quot;Not Clustered&quot;' new-bin='true'>
+            <bin default-name='false' value='&quot;Cluster 1&quot;'>
+              <value>&quot;CUST-002&quot;</value>
+              <value>&quot;CUST-008&quot;</value>
+              <value>&quot;CUST-015&quot;</value>
+              <value>&quot;CUST-021&quot;</value>
+              <value>&quot;CUST-028&quot;</value>
+              <value>&quot;CUST-033&quot;</value>
+              <value>&quot;CUST-048&quot;</value>
+              <value>&quot;CUST-051&quot;</value>
+              <value>&quot;CUST-054&quot;</value>
+              <value>&quot;CUST-058&quot;</value>
+              <value>&quot;CUST-062&quot;</value>
+              <value>&quot;CUST-063&quot;</value>
+              <value>&quot;CUST-086&quot;</value>
+              <value>&quot;CUST-090&quot;</value>
+              <value>&quot;CUST-092&quot;</value>
+              <value>&quot;CUST-093&quot;</value>
+              <value>&quot;CUST-096&quot;</value>
+              <value>&quot;CUST-099&quot;</value>
+              <value>&quot;CUST-103&quot;</value>
+              <value>&quot;CUST-104&quot;</value>
+              <value>&quot;CUST-113&quot;</value>
+              <value>&quot;CUST-116&quot;</value>
+              <value>&quot;CUST-117&quot;</value>
+              <value>&quot;CUST-124&quot;</value>
+              <value>&quot;CUST-128&quot;</value>
+              <value>&quot;CUST-129&quot;</value>
+              <value>&quot;CUST-130&quot;</value>
+              <value>&quot;CUST-131&quot;</value>
+              <value>&quot;CUST-135&quot;</value>
+              <value>&quot;CUST-144&quot;</value>
+              <value>&quot;CUST-147&quot;</value>
+              <value>&quot;CUST-148&quot;</value>
+              <value>&quot;CUST-152&quot;</value>
+              <value>&quot;CUST-158&quot;</value>
+              <value>&quot;CUST-160&quot;</value>
+              <value>&quot;CUST-161&quot;</value>
+              <value>&quot;CUST-170&quot;</value>
+              <value>&quot;CUST-172&quot;</value>
+              <value>&quot;CUST-187&quot;</value>
+              <value>&quot;CUST-188&quot;</value>
+              <value>&quot;CUST-190&quot;</value>
+            </bin>
+            <bin default-name='false' value='&quot;Cluster 2&quot;'>
+              <value>&quot;CUST-004&quot;</value>
+              <value>&quot;CUST-006&quot;</value>
+              <value>&quot;CUST-007&quot;</value>
+              <value>&quot;CUST-011&quot;</value>
+              <value>&quot;CUST-016&quot;</value>
+              <value>&quot;CUST-017&quot;</value>
+              <value>&quot;CUST-019&quot;</value>
+              <value>&quot;CUST-026&quot;</value>
+              <value>&quot;CUST-030&quot;</value>
+              <value>&quot;CUST-034&quot;</value>
+              <value>&quot;CUST-042&quot;</value>
+              <value>&quot;CUST-043&quot;</value>
+              <value>&quot;CUST-044&quot;</value>
+              <value>&quot;CUST-046&quot;</value>
+              <value>&quot;CUST-047&quot;</value>
+              <value>&quot;CUST-049&quot;</value>
+              <value>&quot;CUST-053&quot;</value>
+              <value>&quot;CUST-057&quot;</value>
+              <value>&quot;CUST-068&quot;</value>
+              <value>&quot;CUST-070&quot;</value>
+              <value>&quot;CUST-071&quot;</value>
+              <value>&quot;CUST-072&quot;</value>
+              <value>&quot;CUST-087&quot;</value>
+              <value>&quot;CUST-094&quot;</value>
+              <value>&quot;CUST-095&quot;</value>
+              <value>&quot;CUST-097&quot;</value>
+              <value>&quot;CUST-100&quot;</value>
+              <value>&quot;CUST-101&quot;</value>
+              <value>&quot;CUST-107&quot;</value>
+              <value>&quot;CUST-109&quot;</value>
+              <value>&quot;CUST-111&quot;</value>
+              <value>&quot;CUST-114&quot;</value>
+              <value>&quot;CUST-115&quot;</value>
+              <value>&quot;CUST-119&quot;</value>
+              <value>&quot;CUST-123&quot;</value>
+              <value>&quot;CUST-125&quot;</value>
+              <value>&quot;CUST-142&quot;</value>
+              <value>&quot;CUST-157&quot;</value>
+              <value>&quot;CUST-159&quot;</value>
+              <value>&quot;CUST-165&quot;</value>
+              <value>&quot;CUST-167&quot;</value>
+              <value>&quot;CUST-169&quot;</value>
+              <value>&quot;CUST-171&quot;</value>
+              <value>&quot;CUST-175&quot;</value>
+              <value>&quot;CUST-178&quot;</value>
+              <value>&quot;CUST-186&quot;</value>
+              <value>&quot;CUST-189&quot;</value>
+              <value>&quot;CUST-192&quot;</value>
+              <value>&quot;CUST-194&quot;</value>
+              <value>&quot;CUST-196&quot;</value>
+              <value>&quot;CUST-197&quot;</value>
+            </bin>
+            <bin default-name='false' value='&quot;Cluster 3&quot;'>
+              <value>&quot;CUST-001&quot;</value>
+              <value>&quot;CUST-003&quot;</value>
+              <value>&quot;CUST-005&quot;</value>
+              <value>&quot;CUST-009&quot;</value>
+              <value>&quot;CUST-012&quot;</value>
+              <value>&quot;CUST-013&quot;</value>
+              <value>&quot;CUST-014&quot;</value>
+              <value>&quot;CUST-018&quot;</value>
+              <value>&quot;CUST-020&quot;</value>
+              <value>&quot;CUST-022&quot;</value>
+              <value>&quot;CUST-023&quot;</value>
+              <value>&quot;CUST-024&quot;</value>
+              <value>&quot;CUST-025&quot;</value>
+              <value>&quot;CUST-027&quot;</value>
+              <value>&quot;CUST-029&quot;</value>
+              <value>&quot;CUST-032&quot;</value>
+              <value>&quot;CUST-035&quot;</value>
+              <value>&quot;CUST-036&quot;</value>
+              <value>&quot;CUST-037&quot;</value>
+              <value>&quot;CUST-038&quot;</value>
+              <value>&quot;CUST-039&quot;</value>
+              <value>&quot;CUST-040&quot;</value>
+              <value>&quot;CUST-041&quot;</value>
+              <value>&quot;CUST-045&quot;</value>
+              <value>&quot;CUST-050&quot;</value>
+              <value>&quot;CUST-052&quot;</value>
+              <value>&quot;CUST-055&quot;</value>
+              <value>&quot;CUST-059&quot;</value>
+              <value>&quot;CUST-060&quot;</value>
+              <value>&quot;CUST-061&quot;</value>
+              <value>&quot;CUST-064&quot;</value>
+              <value>&quot;CUST-065&quot;</value>
+              <value>&quot;CUST-066&quot;</value>
+              <value>&quot;CUST-067&quot;</value>
+              <value>&quot;CUST-069&quot;</value>
+              <value>&quot;CUST-073&quot;</value>
+              <value>&quot;CUST-075&quot;</value>
+              <value>&quot;CUST-081&quot;</value>
+              <value>&quot;CUST-082&quot;</value>
+              <value>&quot;CUST-084&quot;</value>
+              <value>&quot;CUST-088&quot;</value>
+              <value>&quot;CUST-089&quot;</value>
+              <value>&quot;CUST-098&quot;</value>
+              <value>&quot;CUST-106&quot;</value>
+              <value>&quot;CUST-108&quot;</value>
+              <value>&quot;CUST-110&quot;</value>
+              <value>&quot;CUST-112&quot;</value>
+              <value>&quot;CUST-118&quot;</value>
+              <value>&quot;CUST-120&quot;</value>
+              <value>&quot;CUST-121&quot;</value>
+              <value>&quot;CUST-122&quot;</value>
+              <value>&quot;CUST-126&quot;</value>
+              <value>&quot;CUST-127&quot;</value>
+              <value>&quot;CUST-132&quot;</value>
+              <value>&quot;CUST-134&quot;</value>
+              <value>&quot;CUST-136&quot;</value>
+              <value>&quot;CUST-137&quot;</value>
+              <value>&quot;CUST-139&quot;</value>
+              <value>&quot;CUST-140&quot;</value>
+              <value>&quot;CUST-143&quot;</value>
+              <value>&quot;CUST-145&quot;</value>
+              <value>&quot;CUST-146&quot;</value>
+              <value>&quot;CUST-150&quot;</value>
+              <value>&quot;CUST-151&quot;</value>
+              <value>&quot;CUST-153&quot;</value>
+              <value>&quot;CUST-154&quot;</value>
+              <value>&quot;CUST-155&quot;</value>
+              <value>&quot;CUST-162&quot;</value>
+              <value>&quot;CUST-163&quot;</value>
+              <value>&quot;CUST-164&quot;</value>
+              <value>&quot;CUST-166&quot;</value>
+              <value>&quot;CUST-168&quot;</value>
+              <value>&quot;CUST-173&quot;</value>
+              <value>&quot;CUST-174&quot;</value>
+              <value>&quot;CUST-176&quot;</value>
+              <value>&quot;CUST-179&quot;</value>
+              <value>&quot;CUST-180&quot;</value>
+              <value>&quot;CUST-181&quot;</value>
+              <value>&quot;CUST-182&quot;</value>
+              <value>&quot;CUST-183&quot;</value>
+              <value>&quot;CUST-184&quot;</value>
+              <value>&quot;CUST-185&quot;</value>
+              <value>&quot;CUST-191&quot;</value>
+              <value>&quot;CUST-193&quot;</value>
+              <value>&quot;CUST-195&quot;</value>
+              <value>&quot;CUST-198&quot;</value>
+              <value>&quot;CUST-199&quot;</value>
+              <value>&quot;CUST-200&quot;</value>
+            </bin>
+          </calculation>
+        </column>
+        <column datatype='string' name='[Customer ID]' role='dimension' type='nominal' />
+        <column-instance column='[Calculation_896779278076141579]' derivation='None' name='[none:Calculation_896779278076141579:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98140' id='8' param='horz' type-v2='layout-flow' w='97538' x='1231' y='930'>
+            <zone h='98140' id='6' type-v2='layout-basic' w='72923' x='1231' y='930'>
+              <zone h='24535' id='3' name='Sheet 4' w='72923' x='1231' y='74535'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='24535' id='5' name='Sheet 3' w='72923' x='1231' y='930'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='24535' id='16' name='Sheet 2' w='72923' x='1231' y='25465'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='24535' id='18' name='Sheet 1' w='72923' x='1231' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98140' id='7' is-fixed='true' param='vert' type-v2='layout-flow' w='24615' x='74154' y='930'>
+              <zone h='7093' id='9' mode='checkdropdown' name='Sheet 3' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Calculation_896779278076141579:nk]' type-v2='filter' w='24615' x='74154' y='930'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7093' id='10' mode='checkdropdown' name='Sheet 3' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]' type-v2='filter' w='24615' x='74154' y='8023'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18139' id='11' name='Sheet 3' pane-specification-id='0' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]' type-v2='size' w='24615' x='74154' y='15116'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10814' id='12' name='Sheet 3' pane-specification-id='0' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]' type-v2='color' w='24615' x='74154' y='33255'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6511' id='13' mode='datetime' param='[Parameters].[Parameter 3]' type-v2='paramctrl' w='24615' x='74154' y='44069'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6511' id='14' mode='datetime' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='24615' x='74154' y='50580'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9186' id='15' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='24615' x='74154' y='57091'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10814' id='17' name='Sheet 2' pane-specification-id='0' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:AdhocCluster:1:ok]' type-v2='color' w='24615' x='74154' y='66277'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='20' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='19' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone h='7093' id='9' mode='checkdropdown' name='Sheet 3' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Calculation_896779278076141579:nk]' type-v2='filter' w='24615' x='74154' y='930'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7093' id='10' mode='checkdropdown' name='Sheet 3' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]' type-v2='filter' w='24615' x='74154' y='8023'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='203' h='24535' id='5' is-fixed='true' name='Sheet 3' w='72923' x='1231' y='930'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='18139' id='11' name='Sheet 3' pane-specification-id='0' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]' type-v2='size' w='24615' x='74154' y='15116'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10814' id='12' name='Sheet 3' pane-specification-id='0' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]' type-v2='color' w='24615' x='74154' y='33255'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='203' h='24535' id='16' is-fixed='true' name='Sheet 2' w='72923' x='1231' y='25465'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10814' id='17' name='Sheet 2' pane-specification-id='0' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:AdhocCluster:1:ok]' type-v2='color' w='24615' x='74154' y='66277'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6511' id='13' mode='datetime' param='[Parameters].[Parameter 3]' type-v2='paramctrl' w='24615' x='74154' y='44069'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='203' h='24535' id='18' is-fixed='true' name='Sheet 1' w='72923' x='1231' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6511' id='14' mode='datetime' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='24615' x='74154' y='50580'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9186' id='15' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='24615' x='74154' y='57091'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='203' h='24535' id='3' is-fixed='true' name='Sheet 4' w='72923' x='1231' y='74535'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D6378E77-22F0-4A9F-A115-F0C9F673E2E8}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B8336F39-616C-4574-AACD-54F735E38AFF}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:AdhocCluster:1:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{86AF77A3-8F31-43FE-992F-47E6E11738B8}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[none:Calculation_896779278076141579:nk]' type='filter' />
+            <card mode='checkdropdown' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[usr:Calculation_896779277933928449:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.0vg4qmc0c70ahv1bs7ro01uwk58p].[Customer ID (clusters)]' type='color' />
+            <card mode='datetime' param='[Parameters].[Parameter 3]' type='parameter' />
+            <card mode='datetime' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5838203F-2ADF-475A-A4CF-8D0E7A40E39D}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A635E881-EC4D-4EFA-864B-830EE8837FD2}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1' />
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 4' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{6A084D54-ADCC-4A5A-B52A-A7E71E539493}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
